@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizing Environmental Inequities</title>
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <h1> Visualizing Environmental Inequities: <br> Pollution and Household Income Dynamics </h1>
+
+    <h3>Overall Introduction</h3>
+
+    <p>Exploring the intricate relationship between environmental pollution and median household income in the United
+        States is vital for understanding the broader dynamics of environmental justice and economic inequality.
+        Pollution, manifesting in various forms such as air and water contaminants, does not impact all communities
+        equally. It disproportionately affects those in lower economic brackets, highlighting a stark intersection of
+        environmental degradation and social inequality. This complex interplay reveals how geographical location and
+        economic status can influence exposure to environmental risks, making it a crucial area of study for advocating
+        for equitable environmental policies and practices.</p>
+
+    <p>Through the lens of interactive visualizations, this project aims to illuminate the patterns, trends, and
+        correlations between pollution levels across different pollutants and median household income. By visualizing
+        these dynamics, we can uncover the nuanced ways in which environmental harm and economic conditions intersect,
+        providing a clearer understanding of the distribution of environmental burdens. Such insights are essential for
+        formulating targeted interventions aimed at mitigating pollution exposure in vulnerable communities and
+        fostering a more sustainable and equitable future for all.</p>
+
+    <p>Addressing environmental inequities requires a comprehensive examination of the factors at play, including
+        economic disparities, regulatory frameworks, and the historical context of land use and industrial placement. By
+        correlating pollution data with household income, this project seeks to highlight areas of concern where
+        environmental injustices may be most pronounced. This endeavor not only sheds light on the current state of
+        environmental equity but also serves as a call to action for policymakers, community leaders, and citizens to
+        engage in concerted efforts towards addressing these critical issues, ensuring that environmental health and
+        prosperity are accessible to all, regardless of economic standing.</p>
+
+
+    <p>To further explore the relationship between environmental pollution and socioeconomic factors, consider visiting
+        the <a href="https://www.epa.gov/">U.S. Environmental Protection Agency (EPA)</a> for comprehensive pollution
+        data and insights. For in-depth analyses on income disparities and socioeconomic research, the <a
+            href="https://www.census.gov/">U.S. Census Bureau</a> offers a wealth of data, including detailed household
+        income statistics. Additionally, policy research and environmental justice initiatives can be found at the <a
+            href="https://www.ejnet.org/">Environmental Justice Network</a> and <a href="https://www.ucsusa.org/">Union
+            of Concerned Scientists</a>, where you can access a range of studies and reports aimed at addressing
+        environmental inequities and advocating for sustainable policies.</p>
+
+
+    <h3>Introduction to the data</h3>
+
+    <p> Our analysis makes use of two datasets. the first data is
+        a data set called `pollution_2000_2021.csv` which contains
+        the following pollution statistics for the US states between 2000 and 2021.
+        The second data set is called `income` and contains median household income data by state for the years 1984 to
+        2018. After combining the two data sets, our combined data has <b> xxx </b> rows with 7
+        features and covers the years 2000-2018. The detailed information about the features are listed
+        in the following table:</p>
+
+    <div class="center">
+        <table class="tg">
+            <thead>
+                <tr>
+                    <th class="tg-0lax">Variable Name</th>
+                    <th class="tg-0lax">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-0lax">State</td>
+                    <td class="tg-0lax">State Name</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Year</td>
+                    <td class="tg-0lax">Year</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">O3_Mean</td>
+                    <td class="tg-0lax">Mean O3 Pollution (ppm)</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">CO_Mean</td>
+                    <td class="tg-0lax">Mean CO Pollution (ppm)</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">SO2_Mean</td>
+                    <td class="tg-0lax">Mean SO2 Pollution (ppm)</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">NO2_Mean</td>
+                    <td class="tg-0lax">Mean NO2 Pollution (ppm)</td>
+                </tr>
+                <tr>
+                    <td class="tg-0lax">Median_Income</td>
+                    <td class="tg-0lax">Median Household Income (USD)</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+    <p>We also incorporated geographical data into our analysis. Thus, we also made use of<a
+            href="https://www.naturalearthdata.com/downloads/">Natural Earth</a> for making maps of US states.
+    </p>
+
+    <p> Following is an interactive map for the states in US. Users can zoom in and pan around the map. The left graph
+        is a scattergeo showing the different pollutant levels by size and state. The right graph is a chloropleth
+        and the color represents median household income by state. When hovering over any
+        state, exact numbers are shown in a tooltip. The data shown on the maps is filtered by year and can be adjusted
+        using the dropdown menu in the top left. </p>
+
+    <div class='center'>
+        <iframe src="maps.html" width="100%" height="600px" frameborder="0"></iframe>
+    </div>
+
+    <p>
+        <b> Sonia can you help summarize the findings from your graph </b>
+    </p>
+
+    <h3>Overview of the Pollution Rate</h3>
+    <div class='text'>
+        <p> First, we present an overview of the O3 pollution rate
+            for all the states with data:
+        </p>
+    </div>
+    <div class='container'>
+        <div class='image'>
+            <img src="histogram.png" width="960px" height="550px" frameborder="0"></img>
+        </div>
+
+    </div>
+
+    <div class='text'>
+        <p> We noticed that there is considerable variation between the states, with some having over
+            double the level of O3 pollution compared to other states. This variation can be influenced by the
+            geographical location, urbanization level, industrial activity, and transportation patterns in each state.
+            For example, Alaska has the lowest average O3 pollution among the states listed. This could be attributed to
+            its remote location, lower population density, and lesser industrial activity compared to other states.
+            Massachusetts is another state with relatively low average O3 pollution that stuck out to us. It is known
+            for its investment in technology and education, which might play a role in its lower pollution levels.
+            Texas was also notable for its moderate O3 levels. Texas has a large number of oil refineries and chemical
+            plants, especially in the Houston area, which we would expect to contribute to its ozone levels. However,
+            the state’s large size likely helps to bring down the ppm average for the state.
+            Finally, Tennessee appeared at the top of the list likely due to having several major urban areas, including
+            Nashville, Memphis, and Knoxville, which have dense traffic and industrial activities. The emissions from
+            vehicles and factories in these areas are likely contributors to higher levels of ozone.
+        </p>
+    </div>
+
+    <h3> The Relationship Between Pollution Rate and Median Income</h3>
+
+    <div class='text'>
+        <p>Moreover, we also want to examine the relationship between
+            pollution rate and median household income In order to do so, we ran a regression on each pollutant with
+            state median income for 2018 data.
+        </p>
+        <p>
+            Based on the regressions shown by the plots, we don't see a clear pattern, suggesting that there may not
+            be a straightforward or strong linear relationship between median income and pollution levels for any of
+            the pollutants. In fact, we noticed that there is even a downward slope for O3, suggesting that higher
+            income levels may even be associated with factors that contribute to lower O3 emissions, such as newer
+            vehicles with better emission controls, transitions to cleaner energy sources, or more effective
+            environmental policies.
+        </p>
+    </div>
+
+    <div class='image'>
+        <img src="regression.png" width="900px" height="650px" frameborder="0"></img>
+    </div>
+
+    <p>We have also created a line plot to show how the pollutant levels changed over time. For these charts, we show
+        the full range of pollutant data from 2000 to 2021:
+    </p>
+
+    <div class='center'>
+        <img src="time.png" width="100%" height="600px" frameborder="0"></img>
+    </div>
+
+    <h3>Compare MA to the Other States</h3>
+
+    <p>
+        Because we all live in Massachusetts, we thought that it would be interesting to take a closer look
+        how pollution and household income in MA compares to other states. We created the
+        following interactive plot such that users can choose another state to compare with MA
+        and show a bar plot for each pollution factor and median household income.
+    </p>
+
+    <div class='center'>
+        <iframe src="summary.html" width="100%" height="350px" frameborder="0"></iframe>
+    </div>
+
+    <h3>Summary and Additional Work</h3>
+
+    <p>
+        In this visualization analysis, we try to explore the US
+        pollution rate across states. We also examine the relation
+        between pollution rate and median household income.
+    </p>
+    <p>
+        Unfortunately, we weren't able to determine any strong relationships between pollution and income. However, we
+        did notice that there seems to be a relationship between population and pollution. For future work, we would
+        like to further explore how pollution relates to other socioeconomic factors like population, vehicle traffic,
+        industrial activity, housing density, etc. We also think that it would be beneficial to widen our scope to look
+        at county data as opposed to state data in order to get a more nuanced view.
+    </p>
+
+    <p>If you are interested in the project and want to share more
+        opinions or resource about the project, please contact us: <br> <br>
+
+        Amanda Ashmore (ashmore.a@northeastern.edu) <br>
+        Max Cernosia (cernosia.m@northeastern.edu) <br>
+        Trevor Lau (lau.tr@northeastern.edu) <br>
+        Sonia Van Stekelenborg (vanstekelenborg.s@northeastern.edu)
+    </p>
+
+</body>
+
+</html>
