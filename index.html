@@ -54,7 +54,7 @@
         a data set called `pollution_2000_2021.csv` which contains
         the following pollution statistics for the US states between 2000 and 2021.
         The second data set is called `income` and contains median household income data by state for the years 1984 to
-        2018. After combining the two data sets, our combined data has <b> xxx </b> rows with 7
+        2018. After combining the two data sets, our combined data has over 100,000 rows with 7 main
         features and covers the years 2000-2018. The detailed information about the features are listed
         in the following table:</p>
 
@@ -99,7 +99,7 @@
             </tbody>
         </table>
     </div>
-    <p>We also incorporated geographical data into our analysis. Thus, we also made use of<a
+    <p>We also incorporated geographical data into our analysis. Thus, we also made use of <a
             href="https://www.naturalearthdata.com/downloads/">Natural Earth</a> for making maps of US states.
     </p>
 
@@ -119,7 +119,7 @@
 
     <h3>Overview of the Pollution Rate</h3>
     <div class='text'>
-        <p> First, we present an overview of the O3 pollution rate
+        <p> First, we present an overview of the four pollutants
             for all the states with data:
         </p>
     </div>
@@ -127,23 +127,56 @@
         <div class='image'>
             <img src="histogram.png" width="960px" height="550px" frameborder="0"></img>
         </div>
-
     </div>
 
     <div class='text'>
-        <p> We noticed that there is considerable variation between the states, with some having over
-            double the level of O3 pollution compared to other states. This variation can be influenced by the
-            geographical location, urbanization level, industrial activity, and transportation patterns in each state.
-            For example, Alaska has the lowest average O3 pollution among the states listed. This could be attributed to
-            its remote location, lower population density, and lesser industrial activity compared to other states.
-            Massachusetts is another state with relatively low average O3 pollution that stuck out to us. It is known
-            for its investment in technology and education, which might play a role in its lower pollution levels.
-            Texas was also notable for its moderate O3 levels. Texas has a large number of oil refineries and chemical
-            plants, especially in the Houston area, which we would expect to contribute to its ozone levels. However,
-            the state’s large size likely helps to bring down the ppm average for the state.
-            Finally, Tennessee appeared at the top of the list likely due to having several major urban areas, including
-            Nashville, Memphis, and Knoxville, which have dense traffic and industrial activities. The emissions from
-            vehicles and factories in these areas are likely contributors to higher levels of ozone.
+        <p> The two states with the highest levels of O3 pollution were Tennessee and Wyoming (0.0389 and 0.0388), with
+            a significant gap between the pollution in these two states and the levels over the rest of the United
+            States—For example, the state with the third highest pollution for this compound is New Mexico, at 0.0349.
+            The state with the lowest levels of O3 was Alaska by far, at 0.0153. Understanding O3 levels is crucial
+            because high concentrations can cause respiratory problems and exacerbate conditions such as asthma,
+            especially during the summer months when ozone levels are typically higher.
+        </p>
+    </div>
+    <div class='container'>
+        <div class='image'>
+            <img src="CO.jpeg" width="960px" height="550px" frameborder="0"></img>
+        </div>
+    </div>
+
+    <div class='text'>
+        <p> The state with the highest level of CO pollution was Arizona at 0.4489, showing notably higher pollution
+            compared to other states in the United States. Conversely, the state with the lowest level of CO pollution
+            was Wyoming, significantly lower than the rest at just 0.1155. Monitoring CO is vital as it is a poisonous
+            gas that can be lethal at high concentrations and can impair brain function and cardiovascular health even
+            at moderate levels.
+        </p>
+    </div>
+    <div class='container'>
+        <div class='image'>
+            <img src="SO2.jpeg" width="960px" height="550px" frameborder="0"></img>
+        </div>
+    </div>
+
+    <div class='text'>
+        <p> The state with the highest level of SO2 pollution was Alaska at 5.6349, marking it as significantly more
+            polluted than the other states within the US. For instance, the state with the next highest level of SO2
+            pollution is New York at 3.9338 The state with the lowest level of SO2 pollution was North Dakota, with a
+            much lower level at just 0.3183. SO2 levels play a large role in the suitability of a region living because
+            of how it irritates the lungs and contributes to the development of respiratory illnesses.
+        </p>
+    </div>
+    <div class='container'>
+        <div class='image'>
+            <img src="no2.jpeg" width="960px" height="550px" frameborder="0"></img>
+        </div>
+    </div>
+
+    <div class='text'>
+        <p> The state with the highest level of NO2 pollution was Colorado, with an average of 18.4735. Conversely, the
+            state with the lowest level of NO2 pollution was South Carolina, substantially lower than the rest at just
+            2.0167. NO2 exposure is linked to various respiratory conditions and can aggravate heart diseases, making it
+            a critical air quality indicator for public health monitoring.
         </p>
     </div>
 
@@ -169,7 +202,8 @@
     </div>
 
     <p>We have also created a line plot to show how the pollutant levels changed over time. For these charts, we show
-        the full range of pollutant data from 2000 to 2021. Firstly, we are able to see a steady decrease in mean pollutant
+        the full range of pollutant data from 2000 to 2021. Firstly, we are able to see a steady decrease in mean
+        pollutant
         levels for carbon monoxide, nitrogen dioxide, and sulfur dioxide, with each at least 50 percent lower
         than their highs in the early 2000s. However, we cannot see the same decrease in ground ozone levels which have
         remained relatively consistent the last 21 years. This may be due to ground ozone not usually being
