@@ -54,9 +54,9 @@
         a data set called `pollution_2000_2021.csv` which contains
         the following pollution statistics for the US states between 2000 and 2021.
         The second data set is called `income` and contains median household income data by state for the years 1984 to
-        2018. After combining the two data sets, our combined data has over 100,000 rows with 7 main
-        features and covers the years 2000-2018. The detailed information about the features are listed
-        in the following table:</p>
+        2018. In the pollution dataset, there are 608 rows. In the median income dataset, there are 950 rows.
+        This project incorporates 7 main features spanning the years 2000-2018. The detailed information regarding these features 
+        are listed in the following table:</p>
 
     <div class="center">
         <table class="tg">
@@ -80,18 +80,34 @@
                     <td class="tg-0lax">Mean O3 Pollution (ppm)</td>
                 </tr>
                 <tr>
+                    <td class="tg-0lax">O3_AQI</td>
+                    <td class="tg-0lax">O3 Air Quality Index Value</td>                    
+                </tr>
+                <tr>
                     <td class="tg-0lax">CO_Mean</td>
                     <td class="tg-0lax">Mean CO Pollution (ppm)</td>
                 </tr>
                 <tr>
+                    <td class="tg-0lax">CO_AQI</td>
+                    <td class="tg-0lax">CO Air Quality Index Value</td>
+                </tr>
+                <tr>                    
                     <td class="tg-0lax">SO2_Mean</td>
                     <td class="tg-0lax">Mean SO2 Pollution (ppm)</td>
                 </tr>
                 <tr>
+                    <td class="tg-0lax">SO2_AQI</td>
+                    <td class="tg-0lax">SO2 Air Quality Index Value</td>
+                </tr>
+                <tr>  
                     <td class="tg-0lax">NO2_Mean</td>
                     <td class="tg-0lax">Mean NO2 Pollution (ppm)</td>
                 </tr>
                 <tr>
+                    <td class="tg-0lax">NO2_AQI</td>
+                    <td class="tg-0lax">NO2 Air Quality Index Value</td>
+                </tr>
+                <tr>  
                     <td class="tg-0lax">Median_Income</td>
                     <td class="tg-0lax">Median Household Income (USD)</td>
                 </tr>
@@ -117,7 +133,16 @@
     <div class='center'>
         <iframe src="maps.html" width="100%" height="600px" frameborder="0"></iframe>
     </div>
-
+    <p> The map shows that states with higher median incomes are mostly in the Northeast and on the West Coast, 
+        with some states in the vicinity of the Illinois area.  When examining pollution levels, Nitrogen Dioxide 
+        (NO2) consistently registers slightly higher Air Quality Index (AQI) values in these higher median income 
+        areas over the years.  On the other hand, Carbon Monoxide (CO) levels exhibit minimal variation across 
+        the country throughout the years. Ozone (O3) consistently displays higher AQI levels compared to other
+        pollutants, although the disparity between states is not significant. Sulfur Dioxide (SO2) levels from 
+        2000 to 2009 are notably higher in the Northeastern region of the United States. However, from 2010 to 2018, 
+        there's a significant decline in SO2 levels. Additionally, both O3 and NO2 exhibit higher AQI levels across the U.S. 
+        compared to CO and SO2, highlighting their broader impact on air quality nationwide.</p>
+    
     <h3>Overview of the Pollution Rate</h3>
     <div class='text'>
         <p> First, we present an overview of the four pollutants
@@ -251,7 +276,7 @@
         Amanda Ashmore (ashmore.a@northeastern.edu) <br>
         Max Cernosia (cernosia.m@northeastern.edu) <br>
         Trevor Lau (lau.tr@northeastern.edu) <br>
-        Sonia Van Stekelenborg (vanstekelenborg.s@northeastern.edu)
+        Sonia van Stekelenborg (vanstekelenborg.s@northeastern.edu)
     </p>
 
 </body>
