@@ -103,11 +103,16 @@
             href="https://www.naturalearthdata.com/downloads/">Natural Earth</a> for making maps of US states.
     </p>
 
-    <p> Following is an interactive map for the states in US. Users can zoom in and pan around the map. The left graph
-        is a scattergeo showing the different pollutant levels by size and state. The right graph is a chloropleth
-        and the color represents median household income by state. When hovering over any
-        state, exact numbers are shown in a tooltip. The data shown on the maps is filtered by year and can be adjusted
-        using the dropdown menu in the top left. </p>
+    <p> Displayed below are two-by-side interactive maps showcasing state data across the United States. 
+        Users can zoom in and pan around both maps. On the left, a bubble map leverages Plotly’s scattergeo map 
+        library to visualize the pollution data for U.S. states. Each of the four pollutants is depicted by 
+        colored circles, with the size of the circle corresponding to the pollutant value. Users can choose 
+        which pollutants they’d like to display by clicking on the legend. On the map to the right, the 
+        median income for U.S. states is displayed through a choropleth map. In both maps, hovering over 
+        any state triggers a tooltip displaying the respective value (such as pollutant air quality index or 
+        median income), the state name, and the year. At the top left corner, users can click on a drop-down 
+        menu to select a specific year ranging from 2000 to 2018, and the maps will repopulate with data from 
+        the selected year. </p>
 
     <div class='center'>
         <iframe src="maps.html" width="100%" height="600px" frameborder="0"></iframe>
